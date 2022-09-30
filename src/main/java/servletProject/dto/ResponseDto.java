@@ -1,5 +1,8 @@
 package servletProject.dto;
 
+import lombok.Builder;
+
+@Builder
 public class ResponseDto<NBA> {
     private Integer code;
     private String message;

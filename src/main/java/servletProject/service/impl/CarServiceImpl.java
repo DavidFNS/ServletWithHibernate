@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+
 public class CarServiceImpl implements CarService {
     private final CarRepository carRepository;
 
@@ -19,8 +21,19 @@ public class CarServiceImpl implements CarService {
         carRepository = CarRepository.getInstance();
     }
     @Override
-    public void getAllCars() {
-        carRepository.getAllCars();
+    public ResponseDto<List<CarDto>> getAllCars() {
+        List<Car> cars = carRepository.getAllCars();
+        List<CarDto> carDtoList = cars.stream()
+                .map(CarMapper::toDto)
+                .toList();
+
+        return ResponseDto.<List<CarDto>>
+                builder()
+                .code(200)
+                .success(true)
+                .message("OK")
+                .data(carDtoList)
+                .build();
     }
 
     @Override
