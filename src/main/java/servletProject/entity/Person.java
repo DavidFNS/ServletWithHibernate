@@ -23,6 +23,7 @@ public class Person {
         this.created_at = created_at;
     }
 
+    public Person(){}
     public Integer getId() {
         return id;
     }

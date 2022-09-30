@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "classpath://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="servletProject.entity.Car" table="cars">
+        <id name="id">
+            <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+                <param name="sequence">car_id_seq</param>
+            </generator>
+        </id>
+        <property name="name_car"></property>
+        <property name="country"></property>
+        <property name="color"></property>
+        <property name="model_id"></property>
+        <property name="number_id"></property>
+        <property name="price"></property>
+        <property name="year"></property>
+    </class>
+</hibernate-mapping>

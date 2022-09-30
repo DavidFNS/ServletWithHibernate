@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping SYSTEM
+        "classpath://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping xmlns = "http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="servletProject.entity.Number">
+        <id name="id" column="id">
+            <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+                <param name="sequence">number_id_seq</param>
+            </generator>
+        </id>
+
+        <property name="numberOfCar"></property>
+        <property name="price"></property>
+    </class>
+</hibernate-mapping>

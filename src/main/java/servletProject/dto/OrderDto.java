@@ -3,16 +3,16 @@ package servletProject.dto;
 
 public class OrderDto {
     private Integer id;
-    private PersonDto person;
-    private CarDto car;
-    private ModelDto model;
+    private Integer person_id;
+    private Integer car_id;
+    private Integer model_id;
     private Double total_price;
 
-    public OrderDto(Integer id, PersonDto person, CarDto car, ModelDto model, Double total_price) {
+    public OrderDto(Integer id, Integer person_id, Integer car_id, Integer model_id, Double total_price) {
         this.id = id;
-        this.person = person;
-        this.car = car;
-        this.model = model;
+        this.person_id = person_id;
+        this.car_id = car_id;
+        this.model_id = model_id;
         this.total_price = total_price;
     }
 
@@ -20,16 +20,16 @@ public class OrderDto {
         return id;
     }
 
-    public PersonDto getPerson() {
-        return person;
+    public Integer getPerson_id() {
+        return person_id;
     }
 
-    public CarDto getCar() {
-        return car;
+    public Integer getCar() {
+        return car_id;
     }
 
-    public ModelDto getModel() {
-        return model;
+    public Integer getModel_id() {
+        return model_id;
     }
 
     public Double getTotal_price() {
@@ -40,19 +40,30 @@ public class OrderDto {
         this.id = id;
     }
 
-    public void setPerson(PersonDto person) {
-        this.person = person;
+    public void setPerson_id(Integer person_id) {
+        this.person_id = person_id;
     }
 
-    public void setCar(CarDto car) {
-        this.car = car;
+    public void setCar(Integer car_id) {
+        this.car_id = car_id;
     }
 
-    public void setModel(ModelDto model) {
-        this.model = model;
+    public void setModel_id(Integer model_id) {
+        this.model_id = model_id;
     }
 
     public void setTotal_price(Double total_price) {
         this.total_price = total_price;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                " id: " + id + ",\n" +
+                " person_id: " +  + person_id + ",\n" +
+                " Car_id: " + car_id + ",\n" +
+                " model_id:" + model_id + ",\n" +
+                " total_price: " + total_price + ",\n" +
+                "}";
     }
 }

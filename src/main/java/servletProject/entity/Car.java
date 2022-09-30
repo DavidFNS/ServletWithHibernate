@@ -5,54 +5,32 @@ import servletProject.dto.ModelDto;
 public class Car {
     private Integer id;
     private String name_car;
-    private ModelDto model;
+    private Integer model_id;
     private String color;
     private Double price;
     private Integer year;
-    private Number number;
+    private Integer number_id;
     private String country;
 
-    public Car(Integer id, String name_car, ModelDto model, String color, Double price, Integer year, Number number, String country) {
+    public Car(){}
+
+    public Car(Integer id, String name_car, Integer model_id, String color, Double price, Integer year, Integer number_id, String country) {
         this.id = id;
         this.name_car = name_car;
-        this.model = model;
+        this.model_id = model_id;
         this.color = color;
         this.price = price;
         this.year = year;
-        this.number = number;
+        this.number_id = number_id;
         this.country = country;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public Integer getNumber_id() {
+        return number_id;
     }
 
-    public void setName_car(String name_car) {
-        this.name_car = name_car;
-    }
-
-    public void setModel(ModelDto model) {
-        this.model = model;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public void setYear(Integer year) {
-        this.year = year;
-    }
-
-    public void setNumber(Number number) {
-        this.number = number;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
+    public void setNumber_id(Integer number_id) {
+        this.number_id = number_id;
     }
 
     public Integer getId() {
@@ -63,8 +41,8 @@ public class Car {
         return name_car;
     }
 
-    public ModelDto getModel() {
-        return model;
+    public Integer getModel_id() {
+        return model_id;
     }
 
     public String getColor() {
@@ -79,12 +57,36 @@ public class Car {
         return year;
     }
 
-    public Number getNumber() {
-        return number;
-    }
-
     public String getCountry() {
         return country;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setName_car(String name_car) {
+        this.name_car = name_car;
+    }
+
+    public void setModel_id(Integer model_id) {
+        this.model_id = model_id;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     @Override
@@ -92,11 +94,10 @@ public class Car {
         return "{" +
                 " id: " + id + ",\n" +
                 " name_car: " + name_car + ",\n" +
-                " model_id: " + model + ",\n" +
+                " model_id: " + model_id + ",\n" +
                 " color:" + color + ",\n" +
                 " price: " + price + ",\n" +
                 " year: " + year + ",\n" +
-                " number_id: " + number + ",\n" +
                 " country: " + country + ",\n" +
                 "}";
     }

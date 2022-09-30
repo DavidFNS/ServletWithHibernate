@@ -9,6 +9,8 @@ public class Model {
         this.name_model = name_model;
     }
 
+    public Model(){}
+
     public Integer getId() {
         return id;
     }
@@ -23,5 +25,13 @@ public class Model {
 
     public void setName_model(String name_model) {
         this.name_model = name_model;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                " id: " + id + ",\n" +
+                " name_model:" + name_model + "\n" +
+                "}";
     }
 }

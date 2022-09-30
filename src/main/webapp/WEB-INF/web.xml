@@ -4,4 +4,55 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>car</servlet-name>
+    <servlet-class>servletProject.controller.CarServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>model</servlet-name>
+    <servlet-class>servletProject.controller.ModelServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>person</servlet-name>
+    <servlet-class>servletProject.controller.PersonServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>order</servlet-name>
+    <servlet-class>servletProject.controller.OrderServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>number</servlet-name>
+    <servlet-class>servletProject.controller.NumberServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>car</servlet-name>
+    <url-pattern>/car</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>model</servlet-name>
+    <url-pattern>/model</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>person</servlet-name>
+    <url-pattern>/person</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>order</servlet-name>
+    <url-pattern>/order</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>number</servlet-name>
+    <url-pattern>/number</url-pattern>
+  </servlet-mapping>
+
 </web-app>

@@ -21,56 +21,66 @@ public class CarDto {
         this.country = country;
     }
 
+    public CarDto(){}
+
     public Integer getId() {
         return id;
-    }
-
-    public String getName_car() {
-        return name_car;
-    }
-
-    public Integer getModel_id() {
-        return model_id;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public Integer getYear() {
-        return year;
-    }
-
-    public String getCountry() {
-        return country;
     }
 
     public void setId(Integer id) {
         this.id = id;
     }
 
+    public String getName_car() {
+        return name_car;
+    }
+
     public void setName_car(String name_car) {
         this.name_car = name_car;
+    }
+
+    public Integer getModel_id() {
+        return model_id;
     }
 
     public void setModel_id(Integer model_id) {
         this.model_id = model_id;
     }
 
+    public String getColor() {
+        return color;
+    }
+
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public Double getPrice() {
+        return price;
     }
 
     public void setPrice(Double price) {
         this.price = price;
     }
 
+    public Integer getYear() {
+        return year;
+    }
+
     public void setYear(Integer year) {
         this.year = year;
+    }
+
+    public Integer getNumber_id() {
+        return number_id;
+    }
+
+    public void setNumber_id(Integer number_id) {
+        this.number_id = number_id;
+    }
+
+    public String getCountry() {
+        return country;
     }
 
     public void setCountry(String country) {

@@ -24,4 +24,12 @@ public class ModelDto {
     public void setName_model(String name_model) {
         this.name_model = name_model;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                " id: " + id + ",\n" +
+                " name_model:" + name_model + "\n" +
+                "}";
+    }
 }

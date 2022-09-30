@@ -11,6 +11,10 @@ public class Number {
         this.price = price;
     }
 
+    public Number(){
+
+    }
+
     public Double getPrice() {
         return price;
     }
